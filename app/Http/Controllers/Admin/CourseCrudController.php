@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Operation\FetchOperation;
+use App\Http\Controllers\Operation\InlineCreateOperation;
 use App\Http\Requests\CourseRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
@@ -18,7 +20,9 @@ class CourseCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\InlineCreateOperation;
+    use InlineCreateOperation;
+    use FetchOperation;
+
 
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
@@ -38,6 +42,11 @@ class CourseCrudController extends CrudController
      * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
      * @return void
      */
+    public function fetchTags()
+    {
+        return $this->fetch(\App\Models\Tag::class);
+    }
+
     protected function setupListOperation()
     {
         CRUD::addColumn(['name' => 'name', 'label' => 'Tên khóa học']);
@@ -80,6 +89,7 @@ class CourseCrudController extends CrudController
             'attribute' => 'name',
             'inline_create' => [
                 'entity' => 'tag',
+                'add_button_label' => 'Thêm nhãn mới', // configure the text for the `+ Add` inline button
             ]
         ]);
         CRUD::addField(['name' => 'slug', 'label' => 'URL', 'type' => 'hidden']);
