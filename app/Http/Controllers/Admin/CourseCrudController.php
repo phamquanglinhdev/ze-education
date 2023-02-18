@@ -18,6 +18,7 @@ class CourseCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\InlineCreateOperation;
 
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
@@ -72,10 +73,14 @@ class CourseCrudController extends CrudController
             'name' => 'tags',
             'label' => 'Nhãn',
             'type' => 'relationship',
-            'pivot' => 'true',
+            'pivot' => true,
             'model' => 'App\Models\Tag',
             'entity' => 'Tags',
+            'ajax' => true,
             'attribute' => 'name',
+            'inline_create' => [
+                'entity' => 'tag',
+            ]
         ]);
         CRUD::addField(['name' => 'slug', 'label' => 'URL', 'type' => 'hidden']);
         CRUD::addField(['name' => 'description', 'label' => 'Giới thiệu ngắn', 'type' => 'textarea']);
