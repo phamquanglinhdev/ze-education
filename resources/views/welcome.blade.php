@@ -25,6 +25,10 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
 </head>
 <body>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v16.0&appId=752127876147770&autoLogAppEvents=1"
+        nonce="bdCUVoVo"></script>
 <nav class="navbar navbar-expand-lg bg-primary text-primary" style="position: sticky;top: 0;z-index: 1999">
     <!-- Container wrapper -->
     <div class="container">
@@ -471,14 +475,14 @@
             <!-- Grid row -->
             <div class="d-flex mt-3 justify-content-between">
                 <!-- Grid column -->
-                <div class="col-sm-12 col-md-5">
+                <div class="col-sm-12 col-md-4">
                     <!-- Content -->
                     <h6 class="text-uppercase fw-bold mb-4">
                         <i class="fas fa-gem me-3 text-secondary"></i>CÔNG TY TNHH ZE EDUCATION
                     </h6>
                     <p><i class="fas fa-home me-3 text-secondary"></i>Trụ sở: Số 9, ngõ 908/36 Kim Giang, thành phố Hà
                         Nội</p>
-                    <p><i class="fas fa-home me-3 text-secondary"></i> Văn phòng giao dịch Hà Nội:
+                    <p><i class="fas fa-home me-3 text-secondary"></i>Văn phòng giao dịch Hà Nội:
                         Phòng 08, tầng 38, Tòa HH3B khu đô thị Linh Đàm, quận Hoàng Mai, Hà Nội.</p>
                 </div>
                 <!-- Grid column -->
@@ -501,13 +505,18 @@
                 <div class="col-sm-6 col-md-3 d-flex flex-column align-items-baseline">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">THÔNG TIN LIÊN HỆ</h6>
-
-                    <p>
-                        <i class="fas fa-envelope me-3 text-secondary"></i>
-                        info@example.com
-                    </p>
-                    <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
-                    <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+                    <div class="mb-2">
+                        <div class="fb-page" data-href="https://www.facebook.com/laptrinhluon/" data-tabs=""
+                             data-width="300"
+                             data-height="" data-small-header="false" data-adapt-container-width="false"
+                             data-hide-cover="false" data-show-facepile="true">
+                            <blockquote cite="https://www.facebook.com/laptrinhluon/" class="fb-xfbml-parse-ignore"><a
+                                    href="https://www.facebook.com/laptrinhluon/">Laptrinhluon.com</a></blockquote>
+                        </div>
+                    </div>
+                    <div><i class="fas fa-envelope me-3 text-secondary"></i>info@example.com</div>
+                    <div><i class="fas fa-phone me-3 text-secondary"></i> 0977281661</div>
+                    <div><i class="fas fa-print me-3 text-secondary"></i> bizenglishforsuccess@gmail.com</div>
                 </div>
                 <!-- Grid column -->
             </div>
