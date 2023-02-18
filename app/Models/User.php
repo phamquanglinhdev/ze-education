@@ -56,7 +56,9 @@ class User extends Authenticatable
 
     public function setAvatarAttribute($value)
     {
-        if ($value == null) {
+        if ($value != null) {
+            $this->attributes['avatar'] = $value;
+        } else {
             $this->attributes['avatar'] = 'https://sehilo.com/wp-content/uploads/2021/09/nhan-vien-02.png';
         }
     }
