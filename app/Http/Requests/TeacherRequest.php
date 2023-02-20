@@ -26,7 +26,7 @@ class TeacherRequest extends FormRequest
     {
         return [
             'name' => 'required|min:5|max:255',
-            'email' => 'required|email|unique:users'
+            'email' => 'required|email'
         ];
     }
 
@@ -55,7 +55,6 @@ class TeacherRequest extends FormRequest
             'name.max' => 'Tên giáo viên quá dài',
             'email.email' => 'Email không đúng định dạng',
             'email.required' => 'Vui lòng nhập email',
-            'email.unique' => 'Đã tồn tại email trên',
         ];
     }
 }

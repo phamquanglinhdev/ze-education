@@ -47,9 +47,15 @@ class CourseCrudController extends CrudController
         return $this->fetch(\App\Models\Tag::class);
     }
 
+    public function fetchCategory()
+    {
+        return $this->fetch(\App\Models\Category::class);
+    }
+
     protected function setupListOperation()
     {
         CRUD::addColumn(['name' => 'name', 'label' => 'Tên khóa học']);
+        CRUD::addColumn(['name' => 'category', 'label' => 'Danh mục']);
         CRUD::addColumn(['name' => 'tags', 'label' => 'Nhãn']);
         CRUD::addColumn(['name' => 'thumbnail', 'label' => 'Ảnh bìa', 'type' => 'image']);
         CRUD::addColumn(['name' => 'slug', 'label' => 'URL']);
@@ -79,13 +85,22 @@ class CourseCrudController extends CrudController
             'aspect_ratio' => 2
         ]);
         CRUD::addField([
+            'name' => 'category_id',
+            'label' => 'Danh mục',
+//            'ajax' => true,
+            'model' => 'App\Models\Category',
+            'entity' => 'Category',
+            'type' => 'relationship',
+            'inline_create' => true
+        ]);
+        CRUD::addField([
             'name' => 'tags',
             'label' => 'Nhãn',
             'type' => 'relationship',
             'pivot' => true,
             'model' => 'App\Models\Tag',
             'entity' => 'Tags',
-            'ajax' => true,
+//            'ajax' => true,
             'attribute' => 'name',
             'inline_create' => [
                 'entity' => 'tag',

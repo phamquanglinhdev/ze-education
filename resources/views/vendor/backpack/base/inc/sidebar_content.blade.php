@@ -4,8 +4,11 @@
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('teacher') }}"><i
             class="nav-icon las la-chalkboard-teacher"></i>
         Giáo viên</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('category') }}"><i class="nav-icon la la-boxes"></i>
+        Danh mục</a></li>
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('course') }}"><i class="nav-icon las la-laptop"></i>
         Khóa học</a></li>
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('tag') }}"><i class="nav-icon la la-tags"></i>
         Nhãn</a></li>
 
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('skill') }}"><i class="nav-icon la la-question"></i> Skills</a></li>

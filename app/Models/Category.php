@@ -5,12 +5,10 @@ namespace App\Models;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Support\Str;
 
-class Course extends Model
+class Category extends Model
 {
     use CrudTrait;
     use HasFactory;
@@ -23,7 +21,7 @@ class Course extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'courses';
+    protected $table = 'categories';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
@@ -31,39 +29,20 @@ class Course extends Model
     // protected $hidden = [];
     // protected $dates = [];
 
-
     /*
     |--------------------------------------------------------------------------
     | FUNCTIONS
     |--------------------------------------------------------------------------
     */
-    public function setSlugAttribute()
-    {
-        $this->attributes['slug'] = Str::slug($this->name, "-");
-    }
-
-    public function setThumbnailAttribute($value)
-    {
-        if ($value != null) {
-            $this->attributes['thumbnail'] = $value;
-        } else {
-            $this->attributes['thumbnail'] = 'https://www.mikereyfman.com/wp-content/gallery/panoramic-1-to-2-ratio/D1D7897-Final-Leveled-2560.jpg';
-        }
-    }
 
     /*
     |--------------------------------------------------------------------------
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-    public function Tags(): BelongsToMany
+    public function Courses(): HasMany
     {
-        return $this->belongsToMany(Tag::class, "course_tag", "course_id", "tag_id");
-    }
-
-    public function Category(): BelongsTo
-    {
-        return $this->belongsTo(Category::class, "category_id", "id");
+        return $this->hasMany(Course::class, "category_id", "id");
     }
     /*
     |--------------------------------------------------------------------------

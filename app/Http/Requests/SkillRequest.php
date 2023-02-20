@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CourseRequest extends FormRequest
+class SkillRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,14 +22,10 @@ class CourseRequest extends FormRequest
      *
      * @return array
      */
-    public function rules(): array
+    public function rules()
     {
         return [
-            'name' => 'required|min:5|max:100',
-            'description' => 'required',
-            'learn_method' => 'required',
-            'main_content' => 'required',
-            'category_id' => 'required'
+             'name' => 'required|min:5|max:255'
         ];
     }
 
@@ -41,7 +37,7 @@ class CourseRequest extends FormRequest
     public function attributes()
     {
         return [
-
+            //
         ];
     }
 
@@ -53,13 +49,7 @@ class CourseRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'Vui lòng nhập tên khóa học',
-            'description.required' => 'Vui lòng nhập giới thiệu ngắn',
-            'learn_method.required' => 'Vui lòng nhập phương thức học',
-            'main_content.required' => 'Vui lòng nhập nội dung chính',
-            'name.min' => 'Tên khóa học quá ngắn ( Tối thiểu 5 ký tự)',
-            'name.max' => 'Tên khóa học quá dài ( Tối thiểu 100 ký tự)',
-            'category_id.required' => 'Danh mục không được để trống'
+            'name.required' => 'Vui lòng nhập tên kỹ năng',
         ];
     }
 }

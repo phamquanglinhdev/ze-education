@@ -10,16 +10,9 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('courses', function (Blueprint $table) {
+        Schema::create('skills', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger("category_id");
             $table->string("name");
-            $table->string("slug");
-            $table->longText("thumbnail");
-            $table->longText('description');
-            $table->longText("learn_method");
-            $table->longText("main_content");
-            $table->foreign("category_id")->references("id")->on("categories");
             $table->timestamps();
             $table->softDeletesDatetime();
         });
@@ -30,6 +23,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('courses');
+        Schema::dropIfExists('skills');
     }
 };

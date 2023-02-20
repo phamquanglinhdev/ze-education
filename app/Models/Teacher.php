@@ -16,8 +16,17 @@ class Teacher extends User
         static::addGlobalScope(new TeacherScope);
     }
 
+    protected $casts = [
+        'video' => 'json'
+    ];
+
     public function setRoleAttribute()
     {
         $this->attributes["role"] = "teacher";
+    }
+
+    public function Skills(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    {
+        return $this->belongsToMany(Skill::class, "teacher_skill", "teacher_id", "skill_id");
     }
 }

@@ -25,6 +25,7 @@ return new class extends Migration {
             $table->longText("calendar")->nullable();
             $table->longText("level")->nullable();
             $table->longText("video")->nullable();
+            $table->integer("origin")->nullable();
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletesDatetime();
