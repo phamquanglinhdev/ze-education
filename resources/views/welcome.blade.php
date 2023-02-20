@@ -3,7 +3,7 @@
     <div id="carouselExampleCrossfade" class="carousel slide carousel-fade" data-mdb-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://bizenglish.vn/uploads/banner-1.jpg"
+                <img src="{{asset("img/carousel.png")}}"
                      class="d-block w-100" alt="Wild Landscape"/>
             </div>
         </div>
@@ -39,8 +39,10 @@
                             HỌC ONLINE TẠI NHÀ
                         </div>
                         <p class="card-text">
-                            Bạn không cần mất thời gian cho việc đi lại hay tắc đường để có thể tới trung tâm học. Bạn có
-                            thể ngồi tại nhà để học và giỏi tiếng Anh chỉ với chiếc điện thoại, máy tính hoặc ipad kết nối
+                            Bạn không cần mất thời gian cho việc đi lại hay tắc đường để có thể tới trung tâm học. Bạn
+                            có
+                            thể ngồi tại nhà để học và giỏi tiếng Anh chỉ với chiếc điện thoại, máy tính hoặc ipad kết
+                            nối
                             internet.
                         </p>
                     </div>
@@ -56,7 +58,8 @@
                             LỘ TRÌNH CÁ NHÂN HÓA
                         </div>
                         <p class="card-text">
-                            Học 1 kèm 1 nên giáo viên có thể hiểu rõ trình độ bạn và dạy bạn theo lộ trình được cá nhân hóa
+                            Học 1 kèm 1 nên giáo viên có thể hiểu rõ trình độ bạn và dạy bạn theo lộ trình được cá nhân
+                            hóa
                             phù hợp nhất với bạn – đảm bảo hiệu quả gấp nhiều lần so với đi học tại trung tâm.
                         </p>
                     </div>
@@ -72,7 +75,8 @@
                             CHI PHÍ THẤP
                         </div>
                         <p class="card-text">
-                            Học 1 kèm 1 nhưng chi phí cho mỗi buổi học thấp hơn so với học lớp 10 – 12 người tại trung tâm.
+                            Học 1 kèm 1 nhưng chi phí cho mỗi buổi học thấp hơn so với học lớp 10 – 12 người tại trung
+                            tâm.
                             Đảm bảo bạn có thể học tiếng Anh lâu dài mà không còn lo lắng về vấn đề tài chính.
                         </p>
                     </div>
@@ -155,7 +159,8 @@
                             </div>
                             <div class="card-body px-5">
                                 <div class="h5 text-primary">GIÁO VIÊN VIỆT NAM</div>
-                                <p class="card-text">Giáo viên Việt Nam với chứng chỉ IELTS 6.5 – 8.0 hoặc du học sinh tại
+                                <p class="card-text">Giáo viên Việt Nam với chứng chỉ IELTS 6.5 – 8.0 hoặc du học sinh
+                                    tại
                                     Mỹ - Châu Âu.</p>
                             </div>
                         </div>
@@ -172,7 +177,8 @@
                             </div>
                             <div class="card-body px-5">
                                 <div class="h5 text-primary">GIÁO VIÊN PHILIPPINES</div>
-                                <p class="card-text">Giáo viên Philippines nổi tiếng là những người chuyên dạy tiếng Anh cho
+                                <p class="card-text">Giáo viên Philippines nổi tiếng là những người chuyên dạy tiếng Anh
+                                    cho
                                     trẻ em trên toàn thế giới.</p>
                             </div>
                         </div>
@@ -198,10 +204,14 @@
                         <span class="fas fa-star"></span>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">Lần đầu học online mình cũng hơi ngần ngại vì không biết có tốt như học offline
-                            không. Nhưng khi đến với Biz English mình thay đổi suy nghĩ ấy liền, vì học 1 kèm 1 trực tuyến
-                            thế này cũng giống như được kèm cặp ở trên lớp, cô giáo nhiệt tình và đặc biệt dạy rất giỏi. Hơn
-                            thế nữa ngồi học ở nhà mình thấy rất chủ động về thời gian. Mình sẽ đồng hành cùng Biz English
+                        <p class="card-text">Lần đầu học online mình cũng hơi ngần ngại vì không biết có tốt như học
+                            offline
+                            không. Nhưng khi đến với Biz English mình thay đổi suy nghĩ ấy liền, vì học 1 kèm 1 trực
+                            tuyến
+                            thế này cũng giống như được kèm cặp ở trên lớp, cô giáo nhiệt tình và đặc biệt dạy rất giỏi.
+                            Hơn
+                            thế nữa ngồi học ở nhà mình thấy rất chủ động về thời gian. Mình sẽ đồng hành cùng Biz
+                            English
                             lâu dài</p>
                         <div class="h5">- Minh Phương -</div>
                     </div>
@@ -217,9 +227,12 @@
                         <span class="fas fa-star"></span>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">Mình đã tham gia được 2 khóa học của Biz , hiện tại khả năng viết của mình cải
-                            thiện rõ rệt, mình có thể viết mail cho đối tác nước ngoài mà không bị nhiều lỗi ngữ pháp - từ
-                            vựng như trước. Mình đang học khóa giao tiếp với giáo viên Philipines. Cô giáo rất nhiệt tình và
+                        <p class="card-text">Mình đã tham gia được 2 khóa học của Biz , hiện tại khả năng viết của mình
+                            cải
+                            thiện rõ rệt, mình có thể viết mail cho đối tác nước ngoài mà không bị nhiều lỗi ngữ pháp -
+                            từ
+                            vựng như trước. Mình đang học khóa giao tiếp với giáo viên Philipines. Cô giáo rất nhiệt
+                            tình và
                             dễ mến. Học với cô giúp mình tăng phản xạ nói rất nhanh. Cám ơn BIZ English.</p>
                         <div class="h5">- Mỹ Linh -</div>
                     </div>
@@ -235,7 +248,8 @@
                         <span class="fas fa-star"></span>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">Tôi rất hài lòng về các khóa học của Biz English. Sau vài tháng học speaking
+                        <p class="card-text">Tôi rất hài lòng về các khóa học của Biz English. Sau vài tháng học
+                            speaking
                             tôi đã có thể tự tin giao tiếp với người nước ngoài rồi. Giáo viên rất nhiệt tình!</p>
                         <div class="h5">- Yến Nhi -</div>
                     </div>

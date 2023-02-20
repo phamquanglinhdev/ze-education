@@ -28,7 +28,7 @@
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous"
         src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v16.0&appId=752127876147770&autoLogAppEvents=1"
-        nonce="bdCUVoVo"></script>
+        nonce="rDnAB5Qj"></script>
 <nav class="navbar navbar-expand-lg bg-primary text-primary" style="position: sticky;top: 0;z-index: 1999">
     <!-- Container wrapper -->
     <div class="container">
@@ -49,7 +49,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Navbar brand -->
             <a class="navbar-brand mt-2 mt-lg-0" href="#">
-                <div class="text-white">ZE EDUCATION</div>
+                <img src="{{asset("img/white-logo.png")}}" style="width: 2.8em;height: 1.6em">
             </a>
             <!-- Left links -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -181,10 +181,13 @@
                     <h6 class="text-uppercase fw-bold mb-4">
                         <i class="fas fa-gem me-3 text-secondary"></i>CÔNG TY TNHH ZE EDUCATION
                     </h6>
-                    <p><i class="fas fa-home me-3 text-secondary"></i>Trụ sở: Số 9, ngõ 908/36 Kim Giang, thành phố Hà
-                        Nội</p>
-                    <p><i class="fas fa-home me-3 text-secondary"></i>Văn phòng giao dịch Hà Nội:
-                        Phòng 08, tầng 38, Tòa HH3B khu đô thị Linh Đàm, quận Hoàng Mai, Hà Nội.</p>
+                    <p>
+                        ZE Education cung cấp các khóa học tiếng Anh giao tiếp kèm 1-1 với học phí chỉ từ 130k/h.
+                        Theo chủ trương lộ trình cá nhân hóa, chúng mình luôn sẵn sàng lắng nghe và tư vấn định hướng
+                        học tập sao cho phù hợp nhất với từng học viên.
+                    </p>
+                    <p><i class="fas fa-home me-3 text-secondary"></i>Số 22, ngõ 57,Trung Văn
+                        Nam từ Liêm, Hà nội</p>
                 </div>
                 <!-- Grid column -->
 
@@ -194,9 +197,9 @@
                     <h6 class="text-uppercase fw-bold mb-4">
                         THÔNG TIN ZE EDUCATION
                     </h6>
-                    <p><a href="#" class="text-reset">Cách thức học</a></p>
-                    <p><a href="#" class="text-reset">Câu hỏi thường gặp</a></p>
-                    <p><a href="#" class="text-reset">Học phí và cách thanh toán</a></p>
+                    {{--                    <p><a href="#" class="text-reset">Cách thức học</a></p>--}}
+                    {{--                    <p><a href="#" class="text-reset">Câu hỏi thường gặp</a></p>--}}
+                    <p><a href="#" class="text-reset">Thư viện</a></p>
                     <p><a href="#" class="text-reset">Trở thành giáo viên</a></p>
                     <p><a href="#" class="text-reset">Trờ thành đối tác của ZE Education</a></p>
                 </div>
@@ -207,17 +210,17 @@
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">THÔNG TIN LIÊN HỆ</h6>
                     <div class="mb-2">
-                        <div class="fb-page" data-href="https://www.facebook.com/laptrinhluon/" data-tabs=""
-                             data-width="300"
-                             data-height="" data-small-header="false" data-adapt-container-width="false"
+                        <div class="fb-page" data-href="https://www.facebook.com/zeeducation.edu" data-tabs=""
+                             data-width="" data-height="" data-small-header="false" data-adapt-container-width="false"
                              data-hide-cover="false" data-show-facepile="true">
-                            <blockquote cite="https://www.facebook.com/laptrinhluon/" class="fb-xfbml-parse-ignore"><a
-                                    href="https://www.facebook.com/laptrinhluon/">Laptrinhluon.com</a></blockquote>
+                            <blockquote cite="https://www.facebook.com/zeeducation.edu" class="fb-xfbml-parse-ignore"><a
+                                    href="https://www.facebook.com/zeeducation.edu">ZE Education- Gia sư tiếng Anh
+                                    1-1</a></blockquote>
                         </div>
                     </div>
-                    <div><i class="fas fa-envelope me-3 text-secondary"></i>info@example.com</div>
-                    <div><i class="fas fa-phone me-3 text-secondary"></i> 0977281661</div>
-                    <div><i class="fas fa-print me-3 text-secondary"></i> bizenglishforsuccess@gmail.com</div>
+                    <div><i class="fas fa-envelope me-3 text-secondary"></i>info.zeeducation.edu@gmail.com</div>
+                    <div><i class="fas fa-phone me-3 text-secondary"></i> 0398 572 531</div>
+                    {{--                    <div><i class="fas fa-print me-3 text-secondary"></i> bizenglishforsuccess@gmail.com</div>--}}
                 </div>
                 <!-- Grid column -->
             </div>
