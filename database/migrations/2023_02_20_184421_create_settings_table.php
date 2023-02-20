@@ -10,14 +10,12 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('books', function (Blueprint $table) {
+        Schema::create('settings', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger("basket_id");
-            $table->foreign("basket_id")->references("id")->on("baskets");
+            $table->string("key")->unique();
             $table->string("name");
-            $table->longText("thumbnail");
-            $table->string("url");
-            $table->softDeletesDatetime();
+            $table->string("value");
+            $table->string("key_type")->default("text");
             $table->timestamps();
         });
     }
@@ -27,6 +25,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('books');
+        Schema::dropIfExists('settings');
     }
 };

@@ -66,7 +66,7 @@
                     <a class="nav-link text-white" href="{{url("/tat-ca-giao-vien")}}">Giáo viên</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{url("/dang-ky-hoc-thu")}}">Đăng ký học thử</a>
+                    <a class="nav-link text-white" href="{{$_SERVER["TRIAL_LINK"]??"#"}}">Đăng ký học thử</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{url("/su-kien")}}">Sự kiện</a>
@@ -95,38 +95,50 @@
             ><i class="fas fa-search text-white"></i
                 ></span>
         </form>
-        <div class="dropdown">
-            <a
-                class="dropdown-toggle d-flex align-items-center hidden-arrow"
-                href="#"
-                id="navbarDropdownMenuAvatar"
-                role="button"
-                data-mdb-toggle="dropdown"
-                aria-expanded="false"
-            >
+        @if(backpack_auth()->check())
+            <div class="dropdown">
+                <a
+                    class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                    href="#"
+                    id="navbarDropdownMenuAvatar"
+                    role="button"
+                    data-mdb-toggle="dropdown"
+                    aria-expanded="false"
+                >
+                    <img
+                        src="{{backpack_user()->avatar??"https://www.w3schools.com/w3images/avatar2.png"}}"
+                        class="rounded-circle"
+                        height="25"
+                        alt="Black and White Portrait of a Man"
+                        loading="lazy"
+                    />
+                </a>
+                <ul
+                    class="dropdown-menu dropdown-menu-end"
+                    aria-labelledby="navbarDropdownMenuAvatar"
+                >
+                    <li>
+                        <a class="dropdown-item" href="{{backpack_url("")}}">Quản trị</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#"></a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{{route("backpack.auth.logout")}}">Đăng xuất</a>
+                    </li>
+                </ul>
+            </div>
+        @else
+            <a href="{{route("backpack.auth.login")}}">
                 <img
-                    src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                    src="https://static.vecteezy.com/system/resources/thumbnails/000/574/982/small_2x/vector60-5828-01.jpg"
                     class="rounded-circle"
                     height="25"
                     alt="Black and White Portrait of a Man"
                     loading="lazy"
                 />
             </a>
-            <ul
-                class="dropdown-menu dropdown-menu-end"
-                aria-labelledby="navbarDropdownMenuAvatar"
-            >
-                <li>
-                    <a class="dropdown-item" href="#">Cá nhân</a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#">Settings</a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#">Đăng xuất</a>
-                </li>
-            </ul>
-        </div>
+        @endif
     </div>
     <!-- Right elements -->
     </div>
@@ -138,36 +150,36 @@
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-white text-muted">
     <!-- Section: Social media -->
-    <section class=" container d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-        <!-- Left -->
-        <div class="me-5 d-none d-lg-block">
-            <span>Kết nối với chúng tôi qua mạng xã hội:</span>
-        </div>
-        <!-- Left -->
+{{--    <section class=" container d-flex justify-content-center justify-content-lg-between p-4 border-bottom">--}}
+{{--        <!-- Left -->--}}
+{{--        <div class="me-5 d-none d-lg-block">--}}
+{{--            <span>Kết nối với chúng tôi qua mạng xã hội:</span>--}}
+{{--        </div>--}}
+{{--        <!-- Left -->--}}
 
-        <!-- Right -->
-        <div>
-            <a href="" class="me-4 link-secondary">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="" class="me-4 link-secondary">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="" class="me-4 link-secondary">
-                <i class="fab fa-google"></i>
-            </a>
-            <a href="" class="me-4 link-secondary">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="" class="me-4 link-secondary">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="" class="me-4 link-secondary">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
-        <!-- Right -->
-    </section>
+{{--        <!-- Right -->--}}
+{{--        <div>--}}
+{{--            <a href="" class="me-4 link-secondary">--}}
+{{--                <i class="fab fa-facebook-f"></i>--}}
+{{--            </a>--}}
+{{--            <a href="" class="me-4 link-secondary">--}}
+{{--                <i class="fab fa-twitter"></i>--}}
+{{--            </a>--}}
+{{--            <a href="" class="me-4 link-secondary">--}}
+{{--                <i class="fab fa-google"></i>--}}
+{{--            </a>--}}
+{{--            <a href="" class="me-4 link-secondary">--}}
+{{--                <i class="fab fa-instagram"></i>--}}
+{{--            </a>--}}
+{{--            <a href="" class="me-4 link-secondary">--}}
+{{--                <i class="fab fa-linkedin"></i>--}}
+{{--            </a>--}}
+{{--            <a href="" class="me-4 link-secondary">--}}
+{{--                <i class="fab fa-github"></i>--}}
+{{--            </a>--}}
+{{--        </div>--}}
+{{--        <!-- Right -->--}}
+{{--    </section>--}}
     <!-- Section: Social media -->
 
     <!-- Section: Links  -->

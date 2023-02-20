@@ -3,7 +3,7 @@
     <div id="carouselExampleCrossfade" class="carousel slide carousel-fade" data-mdb-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{asset("img/carousel.png")}}"
+                <img src="{{$_SERVER["BANNER"]??asset("img/carousel.png")}}"
                      class="d-block w-100" alt="Wild Landscape"/>
             </div>
         </div>
