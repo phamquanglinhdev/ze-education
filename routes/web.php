@@ -26,3 +26,4 @@ Route::any("/tat-ca-giao-vien", [TeacherController::class, "index"])->name("teac
 Route::any("/thu-vien", [LibraryController::class, "index"])->name("library");
 Route::any("/su-kien", [PostController::class, "index"])->name("posts");
 Route::any("/bai-viet", [PostController::class, "show"])->name("post");
+Route::any("/seed", [PostController::class, "seed"])->name("seed");
