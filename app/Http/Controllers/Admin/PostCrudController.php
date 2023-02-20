@@ -40,6 +40,7 @@ class PostCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::column('title')->label("Tiêu đề");
+        CRUD::column('thumbnail')->label("Ảnh bìa")->type("image");
         CRUD::column('updated_at')->label("Cập nhật lần cuối")->type("datetime");
 
 
@@ -61,6 +62,7 @@ class PostCrudController extends CrudController
         CRUD::setValidation(PostRequest::class);
 
         CRUD::field('title')->label("Tiêu đề");
+        CRUD::field('thumbnail')->label("Ảnh bìa")->type("image")->crop(true)->aspect_ratio(1.75);
         CRUD::field('main_content')->type("summernote")->label("Nội dung");
 
         /**

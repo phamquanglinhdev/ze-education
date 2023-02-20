@@ -29,7 +29,7 @@ class SettingSeeder extends Seeder
             'name' => 'Nội dung trang tuyển dụng',
             'key' => 'hiring_page',
             'key_type' => 'summernote',
-            'value' => 'null'
+            'value' => url("bai-viet?id=2"),
         ]);
 //        DB::table("settings")->insert([
 //            'name' => 'Link trang đăng ký tuyển dụng',

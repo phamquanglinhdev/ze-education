@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->string("title");
             $table->longText("main_content");
+            $table->longText("thumbnail");
             $table->softDeletesDatetime();
             $table->timestamps();
         });
