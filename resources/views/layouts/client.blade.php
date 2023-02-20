@@ -75,7 +75,7 @@
                     <a class="nav-link text-white" href="{{url("/tuyen-dung")}}">Tuyển dụng</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{url("/lien-he")}}">Liên hệ</a>
+                    <a class="nav-link text-white" href="{{url("")}}#lien-he">Liên hệ</a>
                 </li>
             </ul>
             <!-- Left links -->

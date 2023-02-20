@@ -257,7 +257,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-dark">
+    <div class="bg-dark" id="lien-he">
         <div class="container">
             <div class="row my-5 py-5">
                 <div class="col-md-6 bg-white d-none d-lg-block rounded-start">
