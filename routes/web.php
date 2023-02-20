@@ -25,3 +25,4 @@ Route::get("/khoa-hoc/{slug?}", [CourseController::class, "show", "slug"])->name
 Route::any("/tat-ca-giao-vien", [TeacherController::class, "index"])->name("teachers");
 Route::any("/thu-vien", [LibraryController::class, "index"])->name("library");
 Route::any("/su-kien", [PostController::class, "index"])->name("posts");
+Route::any("/bai-viet", [PostController::class, "show"])->name("post");

@@ -24,9 +24,13 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
 
-        $settings = Setting::all();
-        foreach ($settings as $setting) {
-            $_SERVER[strtoupper($setting->key)] = $setting->value;
+        try {
+            $settings = Setting::all();
+            foreach ($settings as $setting) {
+                $_SERVER[strtoupper($setting->key)] = $setting->value;
+            }
+        } catch (\Exception $exception) {
+
         }
         Builder::defaultStringLength(191);
     }
