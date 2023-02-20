@@ -60,36 +60,22 @@
                     <a class="nav-link text-white" href="{{url("/danh-sach-khoa-hoc")}}">Các khóa học</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link text-white" href="{{url("/danh-sach-khoa-hoc")}}">Thư viện</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link text-white" href="{{url("/tat-ca-giao-vien")}}">Giáo viên</a>
                 </li>
-                <li class="nav-item dropdown me-3 me-lg-1">
-                    <a
-                        class="nav-link text-white dropdown-toggle hidden-arrow"
-                        href="#"
-                        id="navbarDropdownMenuLink"
-                        role="button"
-                        data-mdb-toggle="dropdown"
-                        aria-expanded="false"
-                    >
-                        Chia sẻ kinh nghiệm
-                    </a>
-                    <ul
-                        class="dropdown-menu dropdown-menu-end"
-                        aria-labelledby="navbarDropdownMenuLink"
-                    >
-                        <li>
-                            <a class="dropdown-item" href="#">Học nói</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Học viết</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Học nghe</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Tài liệu</a>
-                        </li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{url("/tat-ca-giao-vien")}}">Đăng ký học thử</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{url("/tat-ca-giao-vien")}}">Sự kiện</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{url("/tat-ca-giao-vien")}}">Tuyển dụng</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{url("/tat-ca-giao-vien")}}">Liên hệ</a>
                 </li>
             </ul>
             <!-- Left links -->

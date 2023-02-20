@@ -22,4 +22,6 @@ Route::group([
     Route::crud('teacher', 'TeacherCrudController');
     Route::crud('category', 'CategoryCrudController');
     Route::crud('skill', 'SkillCrudController');
+    Route::crud('basket', 'BasketCrudController');
+    Route::crud('book', 'BookCrudController');
 }); // this should be the absolute last line of this file

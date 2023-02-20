@@ -10,5 +10,9 @@
         Khóa học</a></li>
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('tag') }}"><i class="nav-icon la la-tags"></i>
         Nhãn</a></li>
-
-<li class="nav-item"><a class="nav-link" href="{{ backpack_url('skill') }}"><i class="nav-icon la la-question"></i> Skills</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('skill') }}"><i class="nav-icon la la-question"></i>
+        Kỹ năng</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('basket') }}"><i class="nav-icon la la-question"></i>
+        Danh mục sách</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('book') }}"><i class="nav-icon la la-book"></i> Sách</a>
+</li>
