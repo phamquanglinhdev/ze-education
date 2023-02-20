@@ -75,7 +75,7 @@
                     <a class="nav-link text-white" href="{{$_SERVER["HIRING_PAGE"]??"#"}}">Tuyển dụng</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{url("/")}}#lien-he">Liên hệ</a>
+                    <a class="nav-link text-white" href="{{url("/")}}#lien-he">Liên hệ </a>
                 </li>
             </ul>
             <!-- Left links -->
