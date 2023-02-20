@@ -45,6 +45,10 @@ class Basket extends Model
     {
         return $this->hasMany(Basket::class, "parent_id", "id");
     }
+    public function Books(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Book::class, "basket_id", "id");
+    }
     /*
     |--------------------------------------------------------------------------
     | SCOPES

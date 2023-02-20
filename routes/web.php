@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Client\CourseController;
+use App\Http\Controllers\Client\LibraryController;
 use App\Http\Controllers\Client\TeacherController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,4 @@ Route::get('/', function () {
 Route::get("/danh-sach-khoa-hoc", [CourseController::class, "index"])->name("courses");
 Route::get("/khoa-hoc/{slug?}", [CourseController::class, "show", "slug"])->name("course");
 Route::any("/tat-ca-giao-vien", [TeacherController::class, "index"])->name("teachers");
+Route::any("/thu-vien", [LibraryController::class, "index"])->name("library");

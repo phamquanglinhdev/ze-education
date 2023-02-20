@@ -36,7 +36,7 @@ class Book extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-    public function Basket()
+    public function Basket(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Basket::class, "basket_id", "id");
     }

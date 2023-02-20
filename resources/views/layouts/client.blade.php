@@ -60,22 +60,22 @@
                     <a class="nav-link text-white" href="{{url("/danh-sach-khoa-hoc")}}">Các khóa học</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{url("/danh-sach-khoa-hoc")}}">Thư viện</a>
+                    <a class="nav-link text-white" href="{{url("/thu-vien")}}">Thư viện</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{url("/tat-ca-giao-vien")}}">Giáo viên</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{url("/tat-ca-giao-vien")}}">Đăng ký học thử</a>
+                    <a class="nav-link text-white" href="{{url("/dang-ky-hoc-thu")}}">Đăng ký học thử</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{url("/tat-ca-giao-vien")}}">Sự kiện</a>
+                    <a class="nav-link text-white" href="{{url("/su-kien")}}">Sự kiện</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{url("/tat-ca-giao-vien")}}">Tuyển dụng</a>
+                    <a class="nav-link text-white" href="{{url("/tuyen-dung")}}">Tuyển dụng</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{url("/tat-ca-giao-vien")}}">Liên hệ</a>
+                    <a class="nav-link text-white" href="{{url("/lien-he")}}">Liên hệ</a>
                 </li>
             </ul>
             <!-- Left links -->

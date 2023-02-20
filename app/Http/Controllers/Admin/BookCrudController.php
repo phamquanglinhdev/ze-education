@@ -46,7 +46,8 @@ class BookCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('name')->type("Tên sách");
+        CRUD::column('name')->label("Tên sách");
+        CRUD::column('basket')->label("Danh mục");
         CRUD::column('thumbnail')->label("Ảnh bìa")->type("image");
         CRUD::column('url')->type("link")->label("Link sách");
 
