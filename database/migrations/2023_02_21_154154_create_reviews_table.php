@@ -12,6 +12,7 @@ return new class extends Migration {
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
+            $table->string("name");
             $table->longText("avatar");
             $table->integer("star")->default(5);
             $table->longText("review_content");

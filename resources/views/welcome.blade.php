@@ -230,67 +230,25 @@
         </div>
         <div class="container">
             <div class="owl-carousel py-5">
-                <div class=" p-2 reviews">
-                    <img src="https://thuthuatnhanh.com/wp-content/uploads/2019/08/hinh-girl-xinh-deo-kinh.jpg"
-                         class="card-img-top rounded-circle w-50 m-auto" alt="Sunset Over the Sea"/>
-                    <div class="text-warning text-center mt-2">
-                        <span class="fas fa-star"></span>
-                        <span class="fas fa-star"></span>
-                        <span class="fas fa-star"></span>
-                        <span class="fas fa-star"></span>
-                        <span class="fas fa-star"></span>
+                @foreach($reviews as $review)
+                    <div class=" p-2 reviews">
+                        <img src="{{$review->avatar}}"
+                             class="card-img-top rounded-circle w-50 m-auto" alt="Sunset Over the Sea"/>
+                        <div class="text-warning text-center mt-2">
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                {{$review->review_content}}
+                            </p>
+                            <div class="h5">- {{$review->name}} -</div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <p class="card-text">Lần đầu học online mình cũng hơi ngần ngại vì không biết có tốt như học
-                            offline
-                            không. Nhưng khi đến với Biz English mình thay đổi suy nghĩ ấy liền, vì học 1 kèm 1 trực
-                            tuyến
-                            thế này cũng giống như được kèm cặp ở trên lớp, cô giáo nhiệt tình và đặc biệt dạy rất giỏi.
-                            Hơn
-                            thế nữa ngồi học ở nhà mình thấy rất chủ động về thời gian. Mình sẽ đồng hành cùng Biz
-                            English
-                            lâu dài</p>
-                        <div class="h5">- Minh Phương -</div>
-                    </div>
-                </div>
-                <div class=" p-2 reviews">
-                    <img src="https://anhdepfree.com/wp-content/uploads/2020/08/anh-con-gai-toc-ngan-xinh-xan.jpg"
-                         class="card-img-top rounded-circle w-50 m-auto" alt="Sunset Over the Sea"/>
-                    <div class="text-warning text-center mt-2">
-                        <span class="fas fa-star"></span>
-                        <span class="fas fa-star"></span>
-                        <span class="fas fa-star"></span>
-                        <span class="fas fa-star"></span>
-                        <span class="fas fa-star"></span>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">Mình đã tham gia được 2 khóa học của Biz , hiện tại khả năng viết của mình
-                            cải
-                            thiện rõ rệt, mình có thể viết mail cho đối tác nước ngoài mà không bị nhiều lỗi ngữ pháp -
-                            từ
-                            vựng như trước. Mình đang học khóa giao tiếp với giáo viên Philipines. Cô giáo rất nhiệt
-                            tình và
-                            dễ mến. Học với cô giúp mình tăng phản xạ nói rất nhanh. Cám ơn BIZ English.</p>
-                        <div class="h5">- Mỹ Linh -</div>
-                    </div>
-                </div>
-                <div class=" p-2 reviews">
-                    <img src="https://cf.shopee.vn/file/5eb7c132ec43c5c125e9055409b81600"
-                         class="card-img-top rounded-circle w-50 m-auto" alt="Sunset Over the Sea"/>
-                    <div class="text-warning text-center mt-2">
-                        <span class="fas fa-star"></span>
-                        <span class="fas fa-star"></span>
-                        <span class="fas fa-star"></span>
-                        <span class="fas fa-star"></span>
-                        <span class="fas fa-star"></span>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">Tôi rất hài lòng về các khóa học của Biz English. Sau vài tháng học
-                            speaking
-                            tôi đã có thể tự tin giao tiếp với người nước ngoài rồi. Giáo viên rất nhiệt tình!</p>
-                        <div class="h5">- Yến Nhi -</div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -358,7 +316,7 @@
                         items: 4,
                         mergeFit: true
                     },
-                    autoHeight: true
+                    autoHeight: true,
                 }
             });
         });

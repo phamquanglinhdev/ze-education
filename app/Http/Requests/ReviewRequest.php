@@ -27,7 +27,7 @@ class ReviewRequest extends FormRequest
         return [
             'name' => 'required|min:5|max:255',
             'avatar' => 'required',
-            'review_content' => 'required|min:30|max:250'
+            'review_content' => 'required|min:30|max:1000'
         ];
     }
 
@@ -54,8 +54,8 @@ class ReviewRequest extends FormRequest
             'name.required' => 'Tên không được để trống',
             'avatar' => 'Ảnh đại diện không để trống',
             'review_content' => 'Nội dung không được để trống',
-            'review_content.min' => 'Nội dung quá ngắn (30-250)',
-            'review_content.max' => 'Nội dung quá dài (30-250)',
+            'review_content.min' => 'Nội dung quá ngắn (30-1000)',
+            'review_content.max' => 'Nội dung quá dài (30-1000)',
         ];
     }
 }

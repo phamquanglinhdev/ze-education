@@ -6,6 +6,7 @@ use App\Http\Controllers\Client\CourseController;
 use App\Http\Controllers\Client\LibraryController;
 use App\Http\Controllers\Client\PostController;
 use App\Http\Controllers\Client\TeacherController;
+use App\Models\Review;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', ['reviews' => Review::all()]);
 });
 Route::get("/danh-sach-khoa-hoc", [CourseController::class, "index"])->name("courses");
 Route::get("/khoa-hoc/{slug?}", [CourseController::class, "show", "slug"])->name("course");
