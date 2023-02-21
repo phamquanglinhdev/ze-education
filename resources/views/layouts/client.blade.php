@@ -151,36 +151,36 @@
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-white text-muted">
     <!-- Section: Social media -->
-{{--    <section class=" container d-flex justify-content-center justify-content-lg-between p-4 border-bottom">--}}
-{{--        <!-- Left -->--}}
-{{--        <div class="me-5 d-none d-lg-block">--}}
-{{--            <span>Kết nối với chúng tôi qua mạng xã hội:</span>--}}
-{{--        </div>--}}
-{{--        <!-- Left -->--}}
+    {{--    <section class=" container d-flex justify-content-center justify-content-lg-between p-4 border-bottom">--}}
+    {{--        <!-- Left -->--}}
+    {{--        <div class="me-5 d-none d-lg-block">--}}
+    {{--            <span>Kết nối với chúng tôi qua mạng xã hội:</span>--}}
+    {{--        </div>--}}
+    {{--        <!-- Left -->--}}
 
-{{--        <!-- Right -->--}}
-{{--        <div>--}}
-{{--            <a href="" class="me-4 link-secondary">--}}
-{{--                <i class="fab fa-facebook-f"></i>--}}
-{{--            </a>--}}
-{{--            <a href="" class="me-4 link-secondary">--}}
-{{--                <i class="fab fa-twitter"></i>--}}
-{{--            </a>--}}
-{{--            <a href="" class="me-4 link-secondary">--}}
-{{--                <i class="fab fa-google"></i>--}}
-{{--            </a>--}}
-{{--            <a href="" class="me-4 link-secondary">--}}
-{{--                <i class="fab fa-instagram"></i>--}}
-{{--            </a>--}}
-{{--            <a href="" class="me-4 link-secondary">--}}
-{{--                <i class="fab fa-linkedin"></i>--}}
-{{--            </a>--}}
-{{--            <a href="" class="me-4 link-secondary">--}}
-{{--                <i class="fab fa-github"></i>--}}
-{{--            </a>--}}
-{{--        </div>--}}
-{{--        <!-- Right -->--}}
-{{--    </section>--}}
+    {{--        <!-- Right -->--}}
+    {{--        <div>--}}
+    {{--            <a href="" class="me-4 link-secondary">--}}
+    {{--                <i class="fab fa-facebook-f"></i>--}}
+    {{--            </a>--}}
+    {{--            <a href="" class="me-4 link-secondary">--}}
+    {{--                <i class="fab fa-twitter"></i>--}}
+    {{--            </a>--}}
+    {{--            <a href="" class="me-4 link-secondary">--}}
+    {{--                <i class="fab fa-google"></i>--}}
+    {{--            </a>--}}
+    {{--            <a href="" class="me-4 link-secondary">--}}
+    {{--                <i class="fab fa-instagram"></i>--}}
+    {{--            </a>--}}
+    {{--            <a href="" class="me-4 link-secondary">--}}
+    {{--                <i class="fab fa-linkedin"></i>--}}
+    {{--            </a>--}}
+    {{--            <a href="" class="me-4 link-secondary">--}}
+    {{--                <i class="fab fa-github"></i>--}}
+    {{--            </a>--}}
+    {{--        </div>--}}
+    {{--        <!-- Right -->--}}
+    {{--    </section>--}}
     <!-- Section: Social media -->
 
     <!-- Section: Links  -->
@@ -195,12 +195,11 @@
                         <i class="fas fa-gem me-3 text-secondary"></i>CÔNG TY TNHH ZE EDUCATION
                     </h6>
                     <p>
-                        ZE Education cung cấp các khóa học tiếng Anh giao tiếp kèm 1-1 với học phí chỉ từ 130k/h.
-                        Theo chủ trương lộ trình cá nhân hóa, chúng mình luôn sẵn sàng lắng nghe và tư vấn định hướng
-                        học tập sao cho phù hợp nhất với từng học viên.
+                        {{$_SERVER["FOOTER_DESCRIPTION"]??""}}
                     </p>
-                    <p><i class="fas fa-home me-3 text-secondary"></i>Số 22, ngõ 57,Trung Văn
-                        Nam từ Liêm, Hà nội</p>
+                    <p><i class="fas fa-home me-3 text-secondary"></i>
+                        {{$_SERVER["FOOTER_ADDRESS"]??""}}
+                    </p>
                 </div>
                 <!-- Grid column -->
 
@@ -231,8 +230,8 @@
                                     1-1</a></blockquote>
                         </div>
                     </div>
-                    <div><i class="fas fa-envelope me-3 text-secondary"></i>info.zeeducation.edu@gmail.com</div>
-                    <div><i class="fas fa-phone me-3 text-secondary"></i> 0398 572 531</div>
+                    <div><i class="fas fa-envelope me-3 text-secondary"></i>{{$_SERVER["MAIN_EMAIL"]??""}}</div>
+                    <div><i class="fas fa-phone me-3 text-secondary"></i> {{$_SERVER["MAIN_PHONE"]??""}}</div>
                     {{--                    <div><i class="fas fa-print me-3 text-secondary"></i> bizenglishforsuccess@gmail.com</div>--}}
                 </div>
                 <!-- Grid column -->

@@ -67,7 +67,7 @@
         </div>
         <div class="row">
             <div class="col-sm-4 col-12">
-                <img src="https://bizenglish.vn/uploads/intro-1.jpg" class="card-img-top"
+                <img src="{{asset("img/intro-1.jpg")}}" class="card-img-top"
                      alt="Sunset Over the Sea"/>
                 <div class="card">
 
@@ -86,7 +86,7 @@
                 </div>
             </div>
             <div class="col-sm-4 col-12">
-                <img src="https://bizenglish.vn/uploads/intro-2.jpg" class="card-img-top"
+                <img src="{{asset("img/intro-2.jpg")}}" class="card-img-top"
                      alt="Sunset Over the Sea"/>
                 <div class="card">
 
@@ -103,7 +103,7 @@
                 </div>
             </div>
             <div class="col-sm-4 col-12">
-                <img src="https://bizenglish.vn/uploads/intro-3.jpg" class="card-img-top"
+                <img src="{{asset("img/intro-3.jpg")}}" class="card-img-top"
                      alt="Sunset Over the Sea"/>
                 <div class="card">
 
@@ -130,19 +130,19 @@
             </div>
             <div class="row">
                 <div class="col-sm-3 col-12 mb-4">
-                    <img src="https://bizenglish.vn/img/pad_1.png" class="card-img-top"
+                    <img src="{{asset("img/pad_1.png")}}" class="card-img-top"
                          alt="Sunset Over the Sea"/>
                 </div>
                 <div class="col-sm-3 col-12 mb-4">
-                    <img src="https://bizenglish.vn/img/pad_2.png" class="card-img-top"
+                    <img src="{{asset("img/pad_2.png")}}" class="card-img-top"
                          alt="Sunset Over the Sea"/>
                 </div>
                 <div class="col-sm-3 col-12 mb-4">
-                    <img src="https://bizenglish.vn/img/pad_3.png" class="card-img-top"
+                    <img src="{{asset("img/pad_3.png")}}" class="card-img-top"
                          alt="Sunset Over the Sea"/>
                 </div>
                 <div class="col-sm-3 col-12 mb-4">
-                    <img src="https://bizenglish.vn/img/pad_4.png" class="card-img-top"
+                    <img src="{{asset("img/pad_4.png")}}" class="card-img-top"
                          alt="Sunset Over the Sea"/>
                 </div>
             </div>
@@ -189,7 +189,7 @@
                             <div class="ratio ratio-16x9 rounded">
                                 <iframe
                                     class="rounded"
-                                    src="https://www.youtube.com/embed/bZ3z86nOK4I"
+                                    src="https://www.youtube.com/embed/{{json_decode($_SERVER["LEFT_VIDEO"])->id??""}}"
                                     title="YouTube video"
                                     allowfullscreen
                                 ></iframe>
@@ -207,7 +207,7 @@
                             <div class="ratio ratio-16x9 rounded">
                                 <iframe
                                     class="rounded"
-                                    src="https://www.youtube.com/embed/ukb9GdGlN4s"
+                                    src="https://www.youtube.com/embed/{{json_decode($_SERVER["RIGHT_VIDEO"])->id??""}}"
                                     title="YouTube video"
                                     allowfullscreen
                                 ></iframe>
