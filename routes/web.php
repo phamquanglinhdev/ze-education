@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\ContactCrudController;
+use App\Http\Controllers\Client\ContactController;
 use App\Http\Controllers\Client\CourseController;
 use App\Http\Controllers\Client\LibraryController;
 use App\Http\Controllers\Client\PostController;
@@ -27,3 +29,4 @@ Route::any("/thu-vien", [LibraryController::class, "index"])->name("library");
 Route::any("/su-kien", [PostController::class, "index"])->name("posts");
 Route::any("/bai-viet", [PostController::class, "show"])->name("post");
 Route::any("/seed", [PostController::class, "seed"])->name("seed");
+Route::post("/lien-he", [ContactController::class, "store"])->name("contact.save");

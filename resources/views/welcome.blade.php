@@ -1,5 +1,42 @@
 @extends("layouts.client")
 @section("content")
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.2/sweetalert2.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.2/sweetalert2.min.js"></script>
+    @if ($errors->any())
+        @php
+            $data = "";
+            foreach ($errors->all() as $error){
+                $data .= "<div>$error</div>";
+            }
+
+        @endphp
+        <script>
+            Swal.fire({
+                title: 'Thiếu thông tin',
+                html: '{!! $data !!}',
+                icon: 'error',
+                showConfirmButton: false,
+                timer: 1500,
+            })
+        </script>
+        {{--        <div class="alert alert-danger">--}}
+        {{--            <ul>--}}
+        {{--                @foreach ($errors->all() as $error)--}}
+        {{--                    <li>{{ $error }}</li>--}}
+        {{--                @endforeach--}}
+        {{--            </ul>--}}
+        {{--        </div>--}}
+    @endif
+    @if(session("success"))
+        <script>
+            Swal.fire({
+                title: 'Gửi thành công',
+                text: 'Nhân viên ZE Education sẽ sớm liên hệ với bạn',
+                icon: 'success',
+                // confirmButtonText: 'Cool'
+            })
+        </script>
+    @endif
     <div id="carouselExampleCrossfade" class="carousel slide carousel-fade" data-mdb-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -267,26 +304,27 @@
                 </div>
                 <div class="col-md-6 bg-white rounded-end">
                     <div class=" my-5 p-3 pt-4 rounded">
-                        <form>
+                        <form action="{{route("contact.save")}}" method="post">
+                            @csrf
                             <div class="p-2 h4 mb-5 text-center text-primary">Chia sẻ nhu cầu học tập của bạn</div>
                             <!-- Name input -->
                             <div class="form-outline mb-4">
-                                <input type="text" id="name" class="form-control"/>
+                                <input type="text" id="name" name="name" class="form-control"/>
                                 <label class="form-label" for="name">Tên của bạn</label>
                             </div>
 
                             <!-- Email input -->
                             <div class="form-outline mb-4">
-                                <input type="email" id="email" class="form-control"/>
+                                <input type="email" id="email" name="email" class="form-control"/>
                                 <label class="form-label" for="email">Địa chỉ email</label>
                             </div>
                             <div class="form-outline mb-4">
-                                <input type="tel" id="phone" class="form-control"/>
+                                <input type="tel" id="phone" name="phone" class="form-control"/>
                                 <label class="form-label" for="phone">Số điện thoại</label>
                             </div>
                             <!-- Message input -->
                             <div class="form-outline mb-4">
-                                <textarea class="form-control" id="message" rows="4"></textarea>
+                                <textarea class="form-control" id="message" name="message" rows="4"></textarea>
                                 <label class="form-label" for="message">Nhu cầu học tập của bạn</label>
                             </div>
 

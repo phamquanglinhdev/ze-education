@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class PostRequest extends FormRequest
+class ContactRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -14,7 +14,7 @@ class PostRequest extends FormRequest
     public function authorize()
     {
         // only allow updates if the user is logged in
-        return backpack_auth()->check() && backpack_user()->role == "admin";
+        return true;
     }
 
     /**
@@ -25,8 +25,9 @@ class PostRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|min:5|max:255',
-            'thumbnail' => 'required'
+            'name' => 'bail|required|min:5|max:255',
+            'email' => 'bail|required|email',
+            'phone' => 'bail|required',
         ];
     }
 
@@ -38,7 +39,7 @@ class PostRequest extends FormRequest
     public function attributes()
     {
         return [
-            //
+
         ];
     }
 
@@ -50,8 +51,9 @@ class PostRequest extends FormRequest
     public function messages()
     {
         return [
-            'title.required' => 'Tiêu đề không được phép trống',
-            'thumbnail.required' => 'Ảnh bìa không được để trống',
+            'name.required' => 'Tên không được để trống',
+            'email.required' => 'Email không để trống',
+            'phone.required' => 'Số điện thoại không được để trống'
         ];
     }
 }

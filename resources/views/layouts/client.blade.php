@@ -19,6 +19,7 @@
     />
     <!-- MDB -->
     <link rel="stylesheet" href="{{asset("css/mdb.min.css")}}"/>
+
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <link rel="stylesheet"
@@ -255,6 +256,7 @@
 <script type="text/javascript" src="{{asset("js/mdb.min.js")}}"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="{{asset("js/notify.min.js")}}" type="text/javascript"></script>
 <!-- Custom scripts -->
 @yield("after_scripts")
 </body>
