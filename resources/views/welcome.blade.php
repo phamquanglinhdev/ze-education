@@ -121,7 +121,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-dark text-white">
+    <div class="bg-primary text-white">
         <div class="container">
             <div class="text-center p-5">
                 <div class="h3">
@@ -153,7 +153,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-dark text-white pb-5">
+    <div class="bg-primary text-white pb-5">
         <div class="text-center p-lg-5 p-2">
             <div class="h3">ĐÀO TẠO TIẾNG ANH CHO DOANH NGHIỆP</div>
         </div>
@@ -252,7 +252,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-dark" id="lien-he">
+    <div class="bg-primary" id="lien-he">
         <div class="container">
             <div class="row my-5 py-5">
                 <div class="col-md-6 bg-white d-none d-lg-block rounded-start">

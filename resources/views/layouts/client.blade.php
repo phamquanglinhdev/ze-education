@@ -24,6 +24,7 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="{{asset("css/style.css")}}">
 </head>
 <body>
 <div id="fb-root"></div>
@@ -213,7 +214,7 @@
                     {{--                    <p><a href="#" class="text-reset">Câu hỏi thường gặp</a></p>--}}
                     <p><a href="#" class="text-reset">Thư viện</a></p>
                     <p><a href="#" class="text-reset">Trở thành giáo viên</a></p>
-                    <p><a href="#" class="text-reset">Trờ thành đối tác của ZE Education</a></p>
+                    <p><a href="#" class="text-reset">Trở thành đối tác của ZE Education</a></p>
                 </div>
                 <!-- Grid column -->
 
