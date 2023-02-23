@@ -76,7 +76,7 @@
                             Nhiều khung giờ học trong ngày
                         </div>
                         <p class="card-text">
-                            Học sinh có thể  chọn lựa lớp khung giờ phù hợp một cách linh hoạt, dễ dàng sắp xếp khung
+                            Học sinh có thể chọn lựa lớp khung giờ phù hợp một cách linh hoạt, dễ dàng sắp xếp khung
                             thời gian để học tập.<br><br>
                         </p>
                     </div>
@@ -249,6 +249,25 @@
             </div>
         </div>
     </div>
+    <div class="py-2 container">
+        <div class="text-center pb-5 text-uppercase">
+            <h3>Chứng chỉ của học viên</h3>
+        </div>
+        <div class="owl-carousel">
+            @php
+                $certificates  = \App\Models\Certificate::limit(10)->get();
+            @endphp
+            @foreach($certificates as $certificate)
+                <div class="bg-image bg-dark rounded">
+                    <img src="{{$certificate->image}}" class="w-100 bgd rounded">
+                    <div class="middle text-white">
+                        <div class="text">{{$certificate->name}}</div>
+                        <div class="text">{{$certificate->certificate_name}}</div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
     <div class="bg-primary" id="lien-he">
         <div class="container">
             <div class="row my-5 py-5">
@@ -298,24 +317,54 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $(".owl-carousel").owlCarousel({
-                loop: true,
-                margin: 10,
-                responsive: {
-                    0: {
-                        items: 1,
-                        mergeFit: true
-                    },
-                    600: {
-                        items: 2,
-                        mergeFit: true
-                    },
-                    1000: {
-                        items: 4,
-                        mergeFit: true
+                    loop: true,
+                    margin: 10,
+                    responsive: {
+                        0: {
+                            items: 1,
+                            mergeFit: true
+                        },
+                        600: {
+                            items: 2,
+                            mergeFit: true
+                        },
+                        1000: {
+                            items: 4,
+                            mergeFit: true
+                        },
+
                     },
                     autoHeight: true,
+                    autoplay: true,
+                    autoplayTimeout: 2000,
+                    autoplayHoverPause: true
                 }
-            });
+            );
         });
     </script>
+    <style>
+        .bg-image{
+            cursor: pointer;
+        }
+        .middle {
+            width: 100%;
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            text-align: center;
+
+        }
+        .bgd{
+            transition: .5s ease;
+        }
+        .bg-image:hover .bgd{
+            opacity: 0.05;
+        }
+        .bg-image:hover .middle{
+            opacity: 1;
+        }
+    </style>
 @endsection

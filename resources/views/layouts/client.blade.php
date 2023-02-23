@@ -68,6 +68,9 @@
                     <a class="nav-link text-white" href="{{url("/tat-ca-giao-vien")}}">Giáo viên</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link text-white" href="{{url("/chung-chi")}}">Chứng chỉ</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link text-white" href="{{$_SERVER["TRIAL_LINK"]??"#"}}">Đăng ký học thử</a>
                 </li>
                 <li class="nav-item">

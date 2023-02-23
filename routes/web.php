@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ContactCrudController;
+use App\Http\Controllers\Client\CertificateController;
 use App\Http\Controllers\Client\ContactController;
 use App\Http\Controllers\Client\CourseController;
 use App\Http\Controllers\Client\LibraryController;
@@ -31,3 +32,4 @@ Route::any("/su-kien", [PostController::class, "index"])->name("posts");
 Route::any("/bai-viet", [PostController::class, "show"])->name("post");
 Route::any("/seed", [PostController::class, "seed"])->name("seed");
 Route::post("/lien-he", [ContactController::class, "store"])->name("contact.save");
+Route::get("/chung-chi", [CertificateController::class, "all"])->name("certificates");
