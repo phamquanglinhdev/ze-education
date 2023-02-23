@@ -127,19 +127,19 @@
             </div>
             <div class="row">
                 <div class="col-sm-3 col-12 mb-4">
-                    <img src="{{asset("img/pad_1.png")}}" class="card-img-top"
+                    <img src="{{asset("img/pad_1.png")}}" class="card-img-top rounded"
                          alt="Sunset Over the Sea"/>
                 </div>
                 <div class="col-sm-3 col-12 mb-4">
-                    <img src="{{asset("img/pad_2.png")}}" class="card-img-top"
+                    <img src="{{asset("img/pad_2.png")}}" class="card-img-top rounded"
                          alt="Sunset Over the Sea"/>
                 </div>
                 <div class="col-sm-3 col-12 mb-4">
-                    <img src="{{asset("img/pad_3.png")}}" class="card-img-top"
+                    <img src="{{asset("img/pad_3.png")}}" class="card-img-top rounded"
                          alt="Sunset Over the Sea"/>
                 </div>
                 <div class="col-sm-3 col-12 mb-4">
-                    <img src="{{asset("img/pad_4.png")}}" class="card-img-top"
+                    <img src="{{asset("img/pad_4.png")}}" class="card-img-top rounded"
                          alt="Sunset Over the Sea"/>
                 </div>
             </div>
