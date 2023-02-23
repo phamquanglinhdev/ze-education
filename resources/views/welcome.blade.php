@@ -62,7 +62,7 @@
                 ZE EDUCATION
             </div>
             <div class="h4">
-                Chuyên đào tạo tiếng Anh trực tuyến cho người đi làm
+                Chuyên đào tạo tiếng Anh mọi levels
             </div>
         </div>
         <div class="row">
@@ -72,15 +72,12 @@
                 <div class="card">
 
                     <div class="card-body text-center">
-                        <div class="h5 card-title text-center my-3 my-lg-4">
-                            HỌC ONLINE TẠI NHÀ
+                        <div class="h5 card-title text-center my-3 my-lg-4 text-uppercase">
+                            Nhiều khung giờ học trong ngày
                         </div>
                         <p class="card-text">
-                            Bạn không cần mất thời gian cho việc đi lại hay tắc đường để có thể tới trung tâm học. Bạn
-                            có
-                            thể ngồi tại nhà để học và giỏi tiếng Anh chỉ với chiếc điện thoại, máy tính hoặc ipad kết
-                            nối
-                            internet.
+                            Học sinh có thể  chọn lựa lớp khung giờ phù hợp một cách linh hoạt, dễ dàng sắp xếp khung
+                            thời gian để học tập.<br><br>
                         </p>
                     </div>
                 </div>
@@ -161,7 +158,7 @@
             <div class="row py-5 align-items-center" style="border: 2px white dashed">
                 <div class="col-md-5 col-12">
                     <div class="h5">
-                        BIZ ENGLISH đào tạo tiếng Anh Online cho nhân viên các doanh nghiệp theo yêu cầu.
+                        ZE EDUCATION đào tạo tiếng Anh Online cho nhân viên các doanh nghiệp theo yêu cầu.
                     </div>
                     <hr>
                     <ul>
@@ -171,10 +168,10 @@
                     </ul>
                 </div>
                 <div class="col-md-7 col-12 w-50 m-auto d-lg-block d-none">
-                    <img src="https://bizenglish.vn/img/bussiness.png" class="w-100 rounded shadow-lg"/>
+                    <img src="https://files.catbox.moe/gvnv74.jpg" class="w-100 rounded shadow-lg"/>
                 </div>
                 <div class="col-md-7 col-12 w-100 m-auto d-lg-none d-block">
-                    <img src="https://bizenglish.vn/img/bussiness.png" class="w-100 rounded shadow-lg"/>
+                    <img src="https://files.catbox.moe/gvnv74.jpg" class="w-100 rounded shadow-lg"/>
                 </div>
             </div>
         </div>
@@ -257,7 +254,7 @@
             <div class="row my-5 py-5">
                 <div class="col-md-6 bg-white d-none d-lg-block rounded-start">
                     <div class="my-5">
-                        <img src="https://files.catbox.moe/kl9wtu.jpg" class="w-100">
+                        <img src="https://files.catbox.moe/ji9qzc.png" class="w-100">
                     </div>
                 </div>
                 <div class="col-md-6 bg-white rounded-end">
