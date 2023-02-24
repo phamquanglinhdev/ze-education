@@ -104,20 +104,22 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div class="p-2">
-                                            <div class="h3 text-primary">Video dạy mẫu</div>
-                                            <a href="{{$teacher->video["url"]}}" target="_blank">
-                                                <img src="{{$teacher->video["image"]}}" class="w-100 rounded-3">
-                                            </a>
-                                            {{--                                        <div class="ratio ratio-16x9 rounded">--}}
-                                            {{--                                            <iframe--}}
-                                            {{--                                                class="rounded"--}}
-                                            {{--                                                src="https://www.youtube.com/embed/{{$teacher->video["id"]}}"--}}
-                                            {{--                                                title="{{$teacher->video["title"]}}"--}}
-                                            {{--                                                allowfullscreen--}}
-                                            {{--                                            ></iframe>--}}
-                                            {{--                                        </div>--}}
-                                        </div>
+                                        @if($teacher->video!=null)
+                                            <div class="p-2">
+                                                <div class="h3 text-primary">Video dạy mẫu</div>
+                                                <a href="{{$teacher->video["url"]}}" target="_blank">
+                                                    <img src="{{$teacher->video["image"]}}" class="w-100 rounded-3">
+                                                </a>
+                                                {{--                                        <div class="ratio ratio-16x9 rounded">--}}
+                                                {{--                                            <iframe--}}
+                                                {{--                                                class="rounded"--}}
+                                                {{--                                                src="https://www.youtube.com/embed/{{$teacher->video["id"]}}"--}}
+                                                {{--                                                title="{{$teacher->video["title"]}}"--}}
+                                                {{--                                                allowfullscreen--}}
+                                                {{--                                            ></iframe>--}}
+                                                {{--                                        </div>--}}
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
