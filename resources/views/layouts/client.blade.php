@@ -196,7 +196,7 @@
                 <div class="col-sm-12 col-md-4">
                     <!-- Content -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        <i class="fas fa-gem me-3 text-secondary"></i>CÔNG TY CỔ PHẦN ZE EDUCATION
+                        <i class="fas fa-gem me-3 text-secondary"></i>CÔNG TY CỔ PHẦN GIÁO DỤC VÀ ĐÀO TẠO ZE EDUCATION
                     </h6>
                     <p>
                         {{$_SERVER["FOOTER_DESCRIPTION"]??""}}
