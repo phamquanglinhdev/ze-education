@@ -36,7 +36,7 @@ class TeacherController extends Controller
 
         $bag = [
             'page' => $request->page ?? 1,
-            'teachers' => $query->offset(($request->page - 1) * 10 + 1)->take(10)->get(),
+            'teachers' => $query->offset(($request->page - 1) * 10)->take(10)->get(),
             'skills' => Skill::all(),
             'select_skills' => $skills,
             'select_origin' => $origin,
