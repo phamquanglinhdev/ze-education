@@ -41,7 +41,7 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="{{$_SERVER["BANNER"]??asset("img/carousel.png")}}"
-                     class="d-block w-100" alt="Wild Landscape"/>
+                     class="d-block w-75 m-auto" alt="Wild Landscape"/>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCrossfade"
