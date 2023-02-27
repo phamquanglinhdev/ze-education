@@ -6,6 +6,7 @@ use App\Http\Controllers\Operation\FetchOperation;
 use App\Http\Requests\TeacherRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use Illuminate\Support\Str;
 
 /**
  * Class TeacherCrudController
@@ -48,11 +49,11 @@ class TeacherCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::column('name')->label("Tên");
-        CRUD::column('email')->label("email")->type("email");
+//        CRUD::column('email')->label("email")->type("email");
         CRUD::column('avatar')->label("Ảnh đại diện")->type("image");
         CRUD::column('origin')->label("Giáo viên đến từ")->type("select_from_array")->options([
-            1=>'Việt Nam',
-            2=>'Nước ngoài'
+            1 => 'Việt Nam',
+            2 => 'Nước ngoài'
         ]);
 //        CRUD::column('phone')->label("Số điện thoại")->type("phone");
         CRUD::column('skills')->label("Kỹ năng");
@@ -77,7 +78,7 @@ class TeacherCrudController extends CrudController
 
         CRUD::field('name')->label("Tên");
         CRUD::field('avatar')->label("Ảnh đại diện")->type("image")->crop(true)->aspect_ratio(1);
-        CRUD::field('email')->label("Email");
+        CRUD::field('email')->label("Email")->type("hidden")->value(Str::random(4) . fake()->email());
         CRUD::field('phone')->label("Số điện thoại");
         CRUD::addField([
             'name' => 'skills',
@@ -93,8 +94,8 @@ class TeacherCrudController extends CrudController
             ]
         ]);
         CRUD::field('origin')->label("Giáo viên đến từ")->type("select_from_array")->options([
-            1=>'Việt Nam',
-            2=>'Nuớc ngoài'
+            1 => 'Việt Nam',
+            2 => 'Nuớc ngoài'
         ]);
         CRUD::field('price')->label("Học phí / giờ")->type("number");
         CRUD::field('level')->label("Trình độ giáo viên")->type("summernote");

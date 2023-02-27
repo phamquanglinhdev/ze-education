@@ -22,25 +22,24 @@ class TeacherController extends Controller
                 $builder->whereIn("id", $skills);
             });
         }
-//        if ($skills != []) {
-//            foreach ($skills as $skill) {
-//                $query = $query->whereIn("skill_id", $skill);
-//            }
-//        }
         if ($price != null) {
-            $query = $query->where("users.price", "<=", $price * 1000);
+            $query = $query->where(function (Builder $builder) use ($price) {
+                $builder->where("users.price", "<=", $price * 1000)
+                    ->orWhere("price", "=", null);
+            });
         }
         if ($origin != []) {
             $query->whereIn("origin", $origin);
         }
-
+        $count = $query->count();
         $bag = [
             'page' => $request->page ?? 1,
-            'teachers' => $query->offset(($request->page - 1) * 10)->take(10)->get(),
+            'teachers' => $query->offset(($request->page - 1) * 10)->limit(10)->get(),
             'skills' => Skill::all(),
             'select_skills' => $skills,
             'select_origin' => $origin,
-            'price' => $price
+            'price' => $price,
+            'max_page' => $count % 10 != 0 ? round($count / 10) : (int)($count / 10) + 1
         ];
         $_SESSION["teachers_bag"] = $bag;
 //        dd($query->get());

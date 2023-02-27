@@ -63,6 +63,38 @@
 
             </div>
             <div class="col-md-9 col-12">
+                <div class="p-3 text-center">
+                    <nav aria-label="...">
+                        <ul class="pagination">
+                            @if($page>1)
+                                <li class="page-item">
+                                    <a class="page-link" onclick="pagination(1)">
+                                        <i class="fas fa-step-backward"></i>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" onclick="pagination({{$page-1}})">
+                                        {{ $page-1 }}</a>
+                                </li>
+                            @endif
+                            <li class="page-item active" aria-current="page">
+                                <a class="page-link" href="#">{{$page}} <span
+                                        class="visually-hidden">(current)</span></a>
+                            </li>
+                            @if($page<$max_page)
+                                <li class="page-item">
+                                    <a class="page-link" onclick="pagination({{$page+1}})">
+                                        {{ $page+1 }}</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" onclick="pagination({{$max_page}})">
+                                        <i class="fas fa-step-forward"></i>
+                                    </a>
+                                </li>
+                            @endif
+                        </ul>
+                    </nav>
+                </div>
                 <div class="p-2">
                     @if($teachers->count()>0)
                         @foreach($teachers as $teacher)
@@ -83,8 +115,12 @@
                                             </div>
                                             <div class="mb-1">Mức học phí:
                                                 <span class="badge badge-primary">
-                                                {{number_format($teacher->price)}} đ / Giờ
-                                            </span>
+                                                @if($teacher->price!=null && $teacher->price!=0)
+                                                        {{number_format($teacher->price)}} đ / Giờ
+                                                    @else
+                                                        Liên hệ
+                                                    @endif
+                                                </span>
                                             </div>
                                             <div class="mb-1">
                                             <span>Giáo viên :
@@ -133,6 +169,11 @@
                         <ul class="pagination">
                             @if($page>1)
                                 <li class="page-item">
+                                    <a class="page-link" onclick="pagination(1)">
+                                        <i class="fas fa-step-backward"></i>
+                                    </a>
+                                </li>
+                                <li class="page-item">
                                     <a class="page-link" onclick="pagination({{$page-1}})">
                                         {{ $page-1 }}</a>
                                 </li>
@@ -141,10 +182,17 @@
                                 <a class="page-link" href="#">{{$page}} <span
                                         class="visually-hidden">(current)</span></a>
                             </li>
-                            <li class="page-item">
-                                <a class="page-link" onclick="pagination({{$page+1}})">
-                                    {{ $page+1 }}</a>
-                            </li>
+                            @if($page<$max_page)
+                                <li class="page-item">
+                                    <a class="page-link" onclick="pagination({{$page+1}})">
+                                        {{ $page+1 }}</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" onclick="pagination({{$max_page}})">
+                                        <i class="fas fa-step-forward"></i>
+                                    </a>
+                                </li>
+                            @endif
                         </ul>
                     </nav>
                 </div>
