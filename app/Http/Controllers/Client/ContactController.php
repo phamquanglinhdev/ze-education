@@ -23,7 +23,7 @@ class ContactController extends Controller
             'message' => $message,
         ];
         $contact = Contact::create($newContact);
-        Mail::to("phamquanglinhdev@gmail.com")->send(new ContactMail($contact));
+        Mail::to($_SERVER["EMAIL_NOTIFY"] ?? "phamquanglinhdev@gmail.com")->send(new ContactMail($contact));
         return redirect()->back()->with("success", "Thành công");
     }
 }
