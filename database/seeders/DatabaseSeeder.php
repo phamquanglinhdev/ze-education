@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
         $this->call(CourseSeeder::class);
         $this->call(SettingSeeder::class);
         $this->call(ReviewSeeder::class);
+        $this->call(EmailSettingSeeder::class);
         $this->call(BookSeeder::class);
         $this->call(PostSeeder::class);
     }

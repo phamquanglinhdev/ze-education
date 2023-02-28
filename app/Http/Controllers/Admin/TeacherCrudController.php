@@ -49,7 +49,7 @@ class TeacherCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::column('name')->label("Tên");
-//        CRUD::column('email')->label("email")->type("email");
+    //        CRUD::column('email')->label("email")->type("email");
         CRUD::column('avatar')->label("Ảnh đại diện")->type("image");
         CRUD::column('origin')->label("Giáo viên đến từ")->type("select_from_array")->options([
             1 => 'Việt Nam',
