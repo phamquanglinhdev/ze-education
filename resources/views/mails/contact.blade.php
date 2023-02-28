@@ -1,14 +1,14 @@
 <div>
-    Tên : {{$contact->name}}
+    <b>Tên</b> : {{$contact->name}}
 </div>
 <div>
-    Email : {{$contact->email}}
+    <b>Email</b> : {{$contact->email}}
 </div>
 <div>
-    Số điện thoại : {{$contact->phone}}
+    <b>Số điện thoại</b> : {{$contact->phone}}
 </div>
 <div>
-    Nội dung :
+    <b>Nội dung</b> :
 </div>
 <div>
     {{$contact->message}}
