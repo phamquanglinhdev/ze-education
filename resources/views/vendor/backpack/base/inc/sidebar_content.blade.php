@@ -47,3 +47,4 @@
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('certificate') }}"><i class="nav-icon la la-certificate"></i> Chứng chỉ</a></li>
 
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('backup') }}'><i class='nav-icon la la-hdd-o'></i> Backups</a></li>
+{{--<li class="nav-item"><a class="nav-link" href="{{ backpack_url('music') }}"><i class="nav-icon la la-question"></i> Music</a></li>--}}
